@@ -40,6 +40,25 @@ coverage/
 htmlcov/
 .coverage
 
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage/
+
 # Compressed files
 *.zip
 *.gz
