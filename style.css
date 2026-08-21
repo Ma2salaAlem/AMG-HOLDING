@@ -1210,18 +1210,23 @@ nav.links{align-items:center;}
   position:absolute;
   top:100%;
   left:50%;
-  transform:translate(-50%,8px);
-  margin-top:14px;
+  transform:translate(-50%,0);
+  margin-top:0;
+  padding-top:14px;
   background:var(--graphite);
   border:1px solid var(--line-dark);
   min-width:230px;
-  padding:8px 0;
   opacity:0;
   pointer-events:none;
   transition:opacity .2s ease, transform .2s ease;
   z-index:1000;
 }
-.nav-item:hover .dropdown{opacity:1; pointer-events:auto; transform:translate(-50%,0);}
+.nav-item:hover .dropdown{opacity:1; pointer-events:auto;}
+.dropdown-inner{
+  padding:8px 0;
+  background:var(--graphite);
+  border:1px solid var(--line-dark);
+}
 .dropdown a{
   display:flex;
   align-items:center;
