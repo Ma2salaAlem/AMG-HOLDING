@@ -567,6 +567,233 @@ footer{
 .reveal{opacity:0; transform:translateY(24px); transition:opacity .7s ease, transform .7s ease;}
 .reveal.in{opacity:1; transform:translateY(0);}
 
+/* Enhanced reveal with stagger delays */
+.reveal[data-delay="1"]{transition-delay:.1s;}
+.reveal[data-delay="2"]{transition-delay:.2s;}
+.reveal[data-delay="3"]{transition-delay:.3s;}
+.reveal[data-delay="4"]{transition-delay:.4s;}
+
+/* Respect reduced motion preferences */
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  .reveal,.reveal[data-delay]{transition:none; opacity:1; transform:none;}
+  .hero h1,.hero p.lead,.stat-strip div,.ledger-row,.mvv-card,.reach-item{animation:none!important; transition:none!important;}
+}
+
+/* ===== HERO ENHANCEMENTS ===== */
+.hero h1{
+  text-shadow:0 2px 20px rgba(0,0,0,0.4);
+  animation:fadeUp .8s ease-out both;
+}
+.hero p.lead{
+  animation:fadeUp .8s ease-out .15s both;
+}
+.hero-side{
+  animation:fadeUp .8s ease-out .3s both;
+}
+.stat-strip div{
+  opacity:0;
+  animation:fadeUp .6s ease-out both;
+}
+.stat-strip div:nth-child(1){animation-delay:.4s;}
+.stat-strip div:nth-child(2){animation-delay:.5s;}
+.stat-strip div:nth-child(3){animation-delay:.6s;}
+.stat-strip div:nth-child(4){animation-delay:.7s;}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(20px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* ===== SISTER COMPANIES CARD GRID ===== */
+.companies-grid{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:24px;
+  margin-top:40px;
+}
+.company-card{
+  background:var(--parchment);
+  border:1px solid var(--line);
+  overflow:hidden;
+  position:relative;
+  text-decoration:none;
+  transition:all .3s cubic-bezier(.25,.8,.25,1);
+  box-shadow:0 2px 8px rgba(0,0,0,0.04);
+}
+.company-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 32px rgba(0,0,0,0.12);
+  border-color:var(--oxide);
+}
+.company-card-image{
+  height:180px;
+  background-size:cover;
+  background-position:center;
+  position:relative;
+  overflow:hidden;
+}
+.company-card-image::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(15,17,19,0.2) 0%, rgba(15,17,19,0.65) 100%);
+  transition:background .3s ease;
+}
+.company-card:hover .company-card-image::after{
+  background:linear-gradient(180deg, rgba(15,17,19,0.1) 0%, rgba(15,17,19,0.5) 100%);
+}
+.company-card-badge{
+  position:absolute;
+  top:14px;
+  left:14px;
+  font-family:'IBM Plex Mono', monospace;
+  font-size:10px;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  color:var(--parchment);
+  background:var(--oxide);
+  padding:5px 10px;
+  z-index:2;
+}
+.company-card-content{
+  padding:22px 20px;
+}
+.company-card-idx{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:11px;
+  color:var(--alloy);
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  margin-bottom:8px;
+}
+.company-card-name{
+  font-family:'Space Grotesk', sans-serif;
+  font-weight:600;
+  font-size:17px;
+  color:var(--ink);
+  margin-bottom:10px;
+  line-height:1.3;
+}
+.company-card-desc{
+  font-size:13.5px;
+  color:#5a6066;
+  line-height:1.6;
+  margin-bottom:16px;
+}
+.company-card-link{
+  font-family:'IBM Plex Mono', monospace;
+  font-size:12px;
+  color:var(--oxide);
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  font-weight:500;
+  transition:gap .2s ease;
+}
+.company-card:hover .company-card-link{
+  gap:10px;
+}
+.company-card-arrow{
+  transition:transform .2s ease;
+}
+.company-card:hover .company-card-arrow{
+  transform:translate(3px, -3px);
+}
+
+/* Category colors for badges */
+.company-card[data-category="steel"] .company-card-badge{background:#2A2E34;}
+.company-card[data-category="coffee"] .company-card-badge{background:#4A2E1E;}
+.company-card[data-category="realestate"] .company-card-badge{background:#C1440E;}
+.company-card[data-category="energy"] .company-card-badge{background:#1B1E22;}
+.company-card[data-category="agro"] .company-card-badge{background:#5A6B3A;}
+.company-card[data-category="metal"] .company-card-badge{background:#3D4348;}
+
+@media(max-width:1200px){
+  .companies-grid{grid-template-columns:repeat(3, 1fr);}
+}
+@media(max-width:900px){
+  .companies-grid{grid-template-columns:repeat(2, 1fr);}
+}
+@media(max-width:600px){
+  .companies-grid{grid-template-columns:1fr;}
+}
+
+/* ===== LEDGER ROW ENHANCEMENTS ===== */
+.ledger-row{
+  animation:fadeUp .6s ease-out both;
+}
+.ledger-row:nth-child(1){animation-delay:.1s;}
+.ledger-row:nth-child(2){animation-delay:.15s;}
+.ledger-row:nth-child(3){animation-delay:.2s;}
+.ledger-row:nth-child(4){animation-delay:.25s;}
+.ledger-row:nth-child(5){animation-delay:.3s;}
+.ledger-row:nth-child(6){animation-delay:.35s;}
+.ledger-row:nth-child(7){animation-delay:.4s;}
+.ledger-row:nth-child(8){animation-delay:.45s;}
+
+/* ===== MVV CARD ENHANCEMENTS ===== */
+.mvv-card{
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+.mvv-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 8px 24px rgba(0,0,0,0.08);
+}
+
+/* ===== REACH LIST ENHANCEMENTS ===== */
+.reach-item{
+  transition:padding-left .2s ease, background .2s ease;
+}
+.reach-item:hover{
+  padding-left:8px;
+  background:rgba(255,255,255,0.02);
+}
+
+/* ===== BUTTON ENHANCEMENTS ===== */
+.cta-btn,.nav-cta,.follow-btn{
+  position:relative;
+  overflow:hidden;
+}
+.cta-btn::before,.nav-cta::before,.follow-btn::before{
+  content:"";
+  position:absolute;
+  top:50%;
+  left:50%;
+  width:0;
+  height:0;
+  background:rgba(255,255,255,0.1);
+  border-radius:50%;
+  transform:translate(-50%, -50%);
+  transition:width .4s ease, height .4s ease;
+}
+.cta-btn:hover::before,.nav-cta:hover::before,.follow-btn:hover::before{
+  width:300px;
+  height:300px;
+}
+
+/* ===== FOOTER LINKS ENHANCEMENT ===== */
+.foot-col li a{
+  position:relative;
+  padding-left:0;
+  transition:padding-left .2s ease, color .2s ease;
+}
+.foot-col li a:hover{
+  padding-left:6px;
+}
+.foot-col li a::before{
+  content:"→";
+  position:absolute;
+  left:-10px;
+  opacity:0;
+  transition:opacity .2s ease, left .2s ease;
+  color:var(--oxide-bright);
+}
+.foot-col li a:hover::before{
+  opacity:1;
+  left:0;
+}
+
 @media(max-width:1050px){
   .ledger-table{grid-template-columns:repeat(2, 1fr);}
 }

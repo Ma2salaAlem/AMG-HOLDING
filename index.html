@@ -140,19 +140,19 @@
     </div>
 
     <div class="stat-strip">
-      <div>
+      <div data-delay="1">
         <div class="stat-num mono">08</div>
         <div class="stat-label">Sister companies</div>
       </div>
-      <div>
+      <div data-delay="2">
         <div class="stat-num mono">02</div>
         <div class="stat-label">Industrial parks</div>
       </div>
-      <div>
+      <div data-delay="3">
         <div class="stat-num mono">1.21M m²</div>
         <div class="stat-label">Combined footprint</div>
       </div>
-      <div>
+      <div data-delay="4">
         <div class="stat-num mono">2010</div>
         <div class="stat-label">Founded</div>
       </div>
@@ -168,54 +168,101 @@
       <p>Each entity under AMG Holdings operates independently within its sector — from raw steel to roasted export beans to residential towers. This is the current registry.</p>
     </div>
 
-    <div class="ledger-table reveal">
-      <a class="ledger-row" id="steel-factory" href="amg-steel-factory.html" style="--row-bg:url('https://i.ytimg.com/vi/mecdcoQ88XI/maxresdefault.jpg');">
-        <div class="ledger-top"><div class="ledger-idx">01</div><div class="ledger-code">STEEL</div></div>
-        <div class="ledger-name">AMG Steel Factory</div>
-        <div class="ledger-desc">Structural steel manufacturing at the Sheger industrial park.</div>
-        <div class="ledger-arrow">↗</div>
+    <div class="companies-grid reveal">
+      <a class="company-card" href="amg-steel-factory.html" data-category="steel">
+        <div class="company-card-image" style="background-image:url('https://i.ytimg.com/vi/mecdcoQ88XI/maxresdefault.jpg');">
+          <span class="company-card-badge">Steel</span>
+        </div>
+        <div class="company-card-content">
+          <div class="company-card-idx">01</div>
+          <h3 class="company-card-name">AMG Steel Factory</h3>
+          <p class="company-card-desc">Structural steel manufacturing at the Sheger industrial park.</p>
+          <span class="company-card-link">View Company <span class="company-card-arrow">↗</span></span>
+        </div>
       </a>
-      <a class="ledger-row" id="coffee-export" href="amg-coffee-export.html" style="--row-bg:url('https://amgcoffeeexport.com/wp-content/uploads/2026/02/basket-with-roasted-coffee-beans-ground.webp');">
-        <div class="ledger-top"><div class="ledger-idx">02</div><div class="ledger-code">COFFEE</div></div>
-        <div class="ledger-name">AMG Coffee Export</div>
-        <div class="ledger-desc">Sourcing and exporting Ethiopian coffee to international markets.</div>
-        <div class="ledger-arrow">↗</div>
+      
+      <a class="company-card" href="amg-coffee-export.html" data-category="coffee">
+        <div class="company-card-image" style="background-image:url('https://amgcoffeeexport.com/wp-content/uploads/2026/02/basket-with-roasted-coffee-beans-ground.webp');">
+          <span class="company-card-badge">Coffee</span>
+        </div>
+        <div class="company-card-content">
+          <div class="company-card-idx">02</div>
+          <h3 class="company-card-name">AMG Coffee Export</h3>
+          <p class="company-card-desc">Sourcing and exporting Ethiopian coffee to international markets.</p>
+          <span class="company-card-link">View Company <span class="company-card-arrow">↗</span></span>
+        </div>
       </a>
-      <a class="ledger-row" id="real-estate" href="amg-real-estate.html" style="--row-bg:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxFi6ykShXsXOBFl5J5F5CG93PVbo3x-jDPBJt-l5SLP9j-Ah9amLdMPEG&s=10');">
-        <div class="ledger-top"><div class="ledger-idx">03</div><div class="ledger-code">REAL ESTATE</div></div>
-        <div class="ledger-name">AMG Real Estate</div>
-        <div class="ledger-desc">Residential and commercial development across Addis Ababa.</div>
-        <div class="ledger-arrow">↗</div>
+      
+      <a class="company-card" href="amg-real-estate.html" data-category="realestate">
+        <div class="company-card-image" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxFi6ykShXsXOBFl5J5F5CG93PVbo3x-jDPBJt-l5SLP9j-Ah9amLdMPEG&s=10');">
+          <span class="company-card-badge">Real Estate</span>
+        </div>
+        <div class="company-card-content">
+          <div class="company-card-idx">03</div>
+          <h3 class="company-card-name">AMG Real Estate</h3>
+          <p class="company-card-desc">Residential and commercial development across Addis Ababa.</p>
+          <span class="company-card-link">View Company <span class="company-card-arrow">↗</span></span>
+        </div>
       </a>
-      <a class="ledger-row" id="adama-steel" href="adama-steel-factory.html" style="--row-bg:url('https://pbs.twimg.com/media/FNQXwkNXIAwPtQ-.jpg');">
-        <div class="ledger-top"><div class="ledger-idx">04</div><div class="ledger-code">STEEL</div></div>
-        <div class="ledger-name">Adama Steel Factory</div>
-        <div class="ledger-desc">Steel production based at the Adama industrial park.</div>
-        <div class="ledger-arrow">↗</div>
+      
+      <a class="company-card" href="adama-steel-factory.html" data-category="steel">
+        <div class="company-card-image" style="background-image:url('https://pbs.twimg.com/media/FNQXwkNXIAwPtQ-.jpg');">
+          <span class="company-card-badge">Steel</span>
+        </div>
+        <div class="company-card-content">
+          <div class="company-card-idx">04</div>
+          <h3 class="company-card-name">Adama Steel Factory</h3>
+          <p class="company-card-desc">Steel production based at the Adama industrial park.</p>
+          <span class="company-card-link">View Company <span class="company-card-arrow">↗</span></span>
+        </div>
       </a>
-      <a class="ledger-row" id="afrisky" href="afrisky-plc-ethiopia.html" style="--row-bg:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzbeDmvFU2ahuIsBOrS7sh1AkFgjSGwqiAoBO_h--yO_JH5uUAmvbeByM&s=10');">
-        <div class="ledger-top"><div class="ledger-idx">05</div><div class="ledger-code">METAL</div></div>
-        <div class="ledger-name">Afrisky PLC Ethiopia</div>
-        <div class="ledger-desc">Metal products manufacturing and supply.</div>
-        <div class="ledger-arrow">↗</div>
+      
+      <a class="company-card" href="afrisky-plc-ethiopia.html" data-category="metal">
+        <div class="company-card-image" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzbeDmvFU2ahuIsBOrS7sh1AkFgjSGwqiAoBO_h--yO_JH5uUAmvbeByM&s=10');">
+          <span class="company-card-badge">Metal</span>
+        </div>
+        <div class="company-card-content">
+          <div class="company-card-idx">05</div>
+          <h3 class="company-card-name">Afrisky PLC Ethiopia</h3>
+          <p class="company-card-desc">Metal products manufacturing and supply.</p>
+          <span class="company-card-link">View Company <span class="company-card-arrow">↗</span></span>
+        </div>
       </a>
-      <a class="ledger-row" id="african-oil" href="african-oil-ethiopia.html" style="--row-bg:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlv2hJ9zNhvH1S2eu8aFZ5y0JnHWoRQ36hrC0Yjgkw5Npj8wCX8pY53oQ&s=10');">
-        <div class="ledger-top"><div class="ledger-idx">06</div><div class="ledger-code">ENERGY</div></div>
-        <div class="ledger-name">African Oil Ethiopia</div>
-        <div class="ledger-desc">Fuel distribution and energy retail infrastructure.</div>
-        <div class="ledger-arrow">↗</div>
+      
+      <a class="company-card" href="african-oil-ethiopia.html" data-category="energy">
+        <div class="company-card-image" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlv2hJ9zNhvH1S2eu8aFZ5y0JnHWoRQ36hrC0Yjgkw5Npj8wCX8pY53oQ&s=10');">
+          <span class="company-card-badge">Energy</span>
+        </div>
+        <div class="company-card-content">
+          <div class="company-card-idx">06</div>
+          <h3 class="company-card-name">African Oil Ethiopia</h3>
+          <p class="company-card-desc">Fuel distribution and energy retail infrastructure.</p>
+          <span class="company-card-link">View Company <span class="company-card-arrow">↗</span></span>
+        </div>
       </a>
-      <a class="ledger-row" id="sheger-metal" href="sheger-metal-plc.html" style="--row-bg:url('https://lessoethiopia.com/images/2024/07/16/IMG_0566.jpg');">
-        <div class="ledger-top"><div class="ledger-idx">07</div><div class="ledger-code">METAL</div></div>
-        <div class="ledger-name">Sheger Metal PLC</div>
-        <div class="ledger-desc">Roofing sheets and metal fabrication.</div>
-        <div class="ledger-arrow">↗</div>
+      
+      <a class="company-card" href="sheger-metal-plc.html" data-category="metal">
+        <div class="company-card-image" style="background-image:url('https://lessoethiopia.com/images/2024/07/16/IMG_0566.jpg');">
+          <span class="company-card-badge">Metal</span>
+        </div>
+        <div class="company-card-content">
+          <div class="company-card-idx">07</div>
+          <h3 class="company-card-name">Sheger Metal PLC</h3>
+          <p class="company-card-desc">Roofing sheets and metal fabrication.</p>
+          <span class="company-card-link">View Company <span class="company-card-arrow">↗</span></span>
+        </div>
       </a>
-      <a class="ledger-row" id="agro-processing" href="amg-agro-processing.html" style="--row-bg:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPHSPjIQTIZW_hxHsGKTFlqbM5bTCkZPpROjoZYvOLD6RDyvKqY2Weupw&s=10');">
-        <div class="ledger-top"><div class="ledger-idx">08</div><div class="ledger-code">AGRO</div></div>
-        <div class="ledger-name">AMG Agro-Processing</div>
-        <div class="ledger-desc">Processing agricultural output ahead of export and domestic sale.</div>
-        <div class="ledger-arrow">↗</div>
+      
+      <a class="company-card" href="amg-agro-processing.html" data-category="agro">
+        <div class="company-card-image" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPHSPjIQTIZW_hxHsGKTFlqbM5bTCkZPpROjoZYvOLD6RDyvKqY2Weupw&s=10');">
+          <span class="company-card-badge">Agro</span>
+        </div>
+        <div class="company-card-content">
+          <div class="company-card-idx">08</div>
+          <h3 class="company-card-name">AMG Agro-Processing</h3>
+          <p class="company-card-desc">Processing agricultural output ahead of export and domestic sale.</p>
+          <span class="company-card-link">View Company <span class="company-card-arrow">↗</span></span>
+        </div>
       </a>
     </div>
   </div>
@@ -263,14 +310,14 @@
       </div>
       <div class="reveal">
         <div class="reach-list">
-          <div class="reach-item"><span class="country">United Kingdom</span><span class="via mono">EXPORT LINE</span></div>
-          <div class="reach-item"><span class="country">Germany</span><span class="via mono">EXPORT LINE</span></div>
-          <div class="reach-item"><span class="country">Belgium</span><span class="via mono">EXPORT LINE</span></div>
-          <div class="reach-item"><span class="country">Russia</span><span class="via mono">EXPORT LINE</span></div>
-          <div class="reach-item"><span class="country">United Arab Emirates</span><span class="via mono">EXPORT LINE</span></div>
-          <div class="reach-item"><span class="country">Spain</span><span class="via mono">EXPORT LINE</span></div>
-          <div class="reach-item"><span class="country">France</span><span class="via mono">EXPORT LINE</span></div>
-          <div class="reach-item"><span class="country">Italy</span><span class="via mono">EXPORT LINE</span></div>
+          <div class="reach-item" data-delay="1"><span class="country">United Kingdom</span><span class="via mono">EXPORT LINE</span></div>
+          <div class="reach-item" data-delay="2"><span class="country">Germany</span><span class="via mono">EXPORT LINE</span></div>
+          <div class="reach-item" data-delay="3"><span class="country">Belgium</span><span class="via mono">EXPORT LINE</span></div>
+          <div class="reach-item" data-delay="4"><span class="country">Russia</span><span class="via mono">EXPORT LINE</span></div>
+          <div class="reach-item" data-delay="5"><span class="country">United Arab Emirates</span><span class="via mono">EXPORT LINE</span></div>
+          <div class="reach-item" data-delay="6"><span class="country">Spain</span><span class="via mono">EXPORT LINE</span></div>
+          <div class="reach-item" data-delay="7"><span class="country">France</span><span class="via mono">EXPORT LINE</span></div>
+          <div class="reach-item" data-delay="8"><span class="country">Italy</span><span class="via mono">EXPORT LINE</span></div>
         </div>
       </div>
     </div>
