@@ -247,8 +247,8 @@ nav.links a.active-link::after{
 }
 
 .hero h1{
-  font-size:clamp(2.8rem, 7vw, 6.5rem);
-  line-height:0.95;
+  font-size:clamp(1.8rem, 3vw, 3.2rem);
+  line-height:1.0;
   margin-top:28px;
   color:var(--pure-white);
   text-shadow:0 4px 40px rgba(0,0,0,0.6);
